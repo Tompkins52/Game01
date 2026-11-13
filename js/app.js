@@ -552,7 +552,7 @@ function frame(now) {
 let wake = null;
 async function keepAwake(on) {
   try {
-    if (on && !wake && navigator.wakeLock) {
+    if (on && !wake && navigator.wakeLock && !framed) {
       wake = await navigator.wakeLock.request('screen');
       wake.addEventListener('release', () => {
         wake = null;
@@ -1083,6 +1083,7 @@ async function boot() {
     canvas: $('intro-cv'), face: $('sven-cv'), text: $('intro-text'), dots: $('intro-dots'),
     next: $('btn-intro-next'), skip: $('btn-intro-skip'), story, dogDefs, slotColors, villains, sound
   });
+  if (framed) $('fineprint').textContent = 'Preview: thumb steering only. Tilt and friend races work at the game\'s own web address.';
   buildDogs();
   wire();
   refreshSettings();
