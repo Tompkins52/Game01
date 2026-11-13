@@ -96,7 +96,8 @@ export class Input {
     const T = this.tilt;
     let b = e.beta, g = e.gamma;
     // If the screen is turned sideways, swap the axes so "forward" still means away from you.
-    const ang = (window.screen && window.screen.orientation && window.screen.orientation.angle) || 0;
+    const so = window.screen && window.screen.orientation;
+    const ang = so && typeof so.angle === 'number' ? so.angle : typeof window.orientation === 'number' ? window.orientation : 0;
     if (ang === 90) {
       const tb = b;
       b = -g;

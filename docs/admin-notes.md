@@ -56,7 +56,7 @@ If Chrome is not found, set `CHROME_PATH` to its location. The browser test take
 
 The game is static files. It needs an https address for tilt steering, friend races and offline start.
 
-- **For testing and free play:** GitHub Pages from this repo (Settings, Pages, deploy from the `main` branch, root folder). The address is then `https://tompkins52.github.io/game01/`.
+- **For testing and free play:** GitHub Pages from this repo (Settings, Pages, deploy from the `main` branch, root folder). The address is then `https://tompkins52.github.io/Game01/` (the capital G matters).
 - **If it ever charges money or is licensed:** move it to Cloudflare Pages first. GitHub's terms do not allow GitHub Pages for commercial sites.
 
 For the best feel on a phone, open the address and choose Add to Home Screen. That hides the browser bars and, on Android, keeps the screen from rotating when you lean hard.
