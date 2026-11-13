@@ -38,6 +38,7 @@ Add these to the game's address:
 
 ```
 npm install
+npx playwright install chromium     # first time only
 npm test
 python3 -m http.server 8123 &
 npm run test:browser

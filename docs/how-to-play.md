@@ -59,7 +59,7 @@ The three circles at the bottom are your energy. One full circle buys one burst 
 | Each second under par time | 100 |
 | Clean run (never hit by a Bad Owner) | 1,500 |
 
-Later levels pay more: 5 percent extra for each level number. A higher-level dog also earns 2 percent more per level.
+Later levels pay more: every level after the first adds 5 percent, so level 20 pays almost double. A higher-level dog also earns 2 percent more per level.
 
 ## Stars and levels
 
