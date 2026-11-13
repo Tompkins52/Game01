@@ -16,7 +16,7 @@ Build order for version 1, each with its done-when check. All done November 13, 
 | 10 | Sven's intro (`js/intro.js`) | Twelve lines, each with its own animated scene; Skip and replay work | Done |
 | 11 | Friend races (`js/net.js`) | Two browsers race, see the same world and get the same standings | Done on a local link |
 | 12 | Offline start (`sw.js`) and home screen install (`manifest.webmanifest`) | After one online visit the game opens with no signal | Written, not yet checked on a phone |
-| 13 | Par times | Set from the computer-dog runs and loosened for the first ten levels | Done |
+| 13 | Par times | Set from the computer-dog runs | Done |
 | 14 | Docs | Requirements, design, tasks, how-to and admin notes are in `docs/` | Done |
 
 ## Next, in order

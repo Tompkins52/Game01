@@ -18,7 +18,7 @@ Everything players see as content is in `data/`. After a change, run `npm test` 
 | Sven's lines | `data/story.json`. Each line names the scene it plays; the scenes are drawn in `js/intro.js` |
 | Colors and scenery of a neighborhood | The `theme` block in `data/levels.json` |
 
-To re-set par times after tuning, run `node tests/sim.test.mjs --par`. It prints a suggested par for each level: the fastest finish by a strong pack of computer dogs (no Zazu) plus 6 percent. The first ten levels were then loosened by 10 and 5 percent.
+To re-set par times after tuning, run `node tests/sim.test.mjs --par`. It prints a suggested par for each level: the fastest finish by a strong pack of computer dogs (no Zazu) plus 6 percent. The current pars are exactly those suggestions.
 
 ## Handy addresses for testing
 

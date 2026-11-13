@@ -68,8 +68,8 @@ export class Renderer {
   }
   text(x, y, str, color = '#fff', size = 22, life = 1.1) {
     // keep words on the track even when the action is at the edge
-    const half = str.length * size * 0.33, W = this.race ? this.race.W : 480;
-    x = Math.max(half - 20, Math.min(W - half + 20, x));
+    const half = str.length * size * 0.36, W = this.race ? this.race.W : 480;
+    x = Math.max(half - 8, Math.min(W - half + 8, x));
     this.p({ kind: 'text', x, y, vy: 70, str, color, size, life, drag: 0.94 });
   }
 

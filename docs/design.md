@@ -127,7 +127,7 @@ One pip buys Zoomies for 2.2 seconds: 60 percent faster, not slowed by water, im
 
 See `data/rules.json`. The table is in `docs/how-to-play.md`. Two multipliers apply to everything: plus 5 percent per level number (level 20 pays 1.95 times) and plus 2 percent per dog level above 1.
 
-Stars: one for a top three finish, two for a win, three for a win under par. Par for each level is set from the fastest computer-dog run (see admin notes) and is meant to need good Zoomies use.
+Stars: one for a top three finish, two for a win, three for a win under par. Par for each level is set from the fastest computer-dog run (see admin notes). Beating it takes good use of Zoomies; running flat out is not enough for most dogs.
 
 ## Love and dog levels
 
@@ -147,16 +147,16 @@ A level is a recipe: a string of letters in `data/levels.json`, each letter one 
 
 | # | Level | Where | Length | Par | Bad Owners | Kids | New |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | The Squeaky Heist | Maple Street | 7k | 21s | 1 Hoser | 3 | The Hoser |
-| 2 | Sprinkler Season | Maple Street | 7.9k | 22s | 2 Hoser | 4 |  |
-| 3 | Hedge Hoppers | Maple Street | 8.7k | 26s | 2 Hoser | 3 |  |
-| 4 | Net Gains | Maple Street | 8.8k | 26s | 2 Snatcher, 1 Hoser | 4 | The Snatcher |
-| 5 | Drench Dan's Driveway | Maple Street | 10.1k | 35s | 2 Hoser, 1 Snatcher, boss Drench Dan | 3 | Boss fight |
-| 6 | Off the Chain | Barkside Park | 8.8k | 26s | 2 Chainer, 1 Snatcher | 4 | The Chainer |
-| 7 | Duck Pond Dash | Barkside Park | 10k | 27s | 1 Hoser, 2 Chainer, 1 Snatcher | 2 |  |
-| 8 | Inside Voices | Barkside Park | 9.9k | 28s | 2 Yeller, 1 Chainer, 1 Snatcher | 3 | The Yeller |
-| 9 | A Bridge Too Fur | Barkside Park | 10.9k | 29s | 1 Chainer, 2 Yeller, 1 Snatcher, 1 Hoser | 4 |  |
-| 10 | Captain Snatch | Barkside Park | 11.8k | 40s | 2 Snatcher, 2 Chainer, 1 Yeller, boss Captain Snatch | 3 | Boss fight |
+| 1 | The Squeaky Heist | Maple Street | 7k | 19s | 1 Hoser | 3 | The Hoser |
+| 2 | Sprinkler Season | Maple Street | 7.9k | 20s | 2 Hoser | 4 |  |
+| 3 | Hedge Hoppers | Maple Street | 8.7k | 24s | 2 Hoser | 3 |  |
+| 4 | Net Gains | Maple Street | 8.8k | 24s | 2 Snatcher, 1 Hoser | 4 | The Snatcher |
+| 5 | Drench Dan's Driveway | Maple Street | 10.1k | 32s | 2 Hoser, 1 Snatcher, boss Drench Dan | 3 | Boss fight |
+| 6 | Off the Chain | Barkside Park | 8.8k | 25s | 2 Chainer, 1 Snatcher | 4 | The Chainer |
+| 7 | Duck Pond Dash | Barkside Park | 10k | 26s | 1 Hoser, 2 Chainer, 1 Snatcher | 2 |  |
+| 8 | Inside Voices | Barkside Park | 9.9k | 27s | 2 Yeller, 1 Chainer, 1 Snatcher | 3 | The Yeller |
+| 9 | A Bridge Too Fur | Barkside Park | 10.9k | 28s | 1 Chainer, 2 Yeller, 1 Snatcher, 1 Hoser | 4 |  |
+| 10 | Captain Snatch | Barkside Park | 11.8k | 38s | 2 Snatcher, 2 Chainer, 1 Yeller, boss Captain Snatch | 3 | Boss fight |
 | 11 | Bang Average | Downtown | 9.7k | 31s | 2 Boomer, 1 Snatcher, 1 Yeller | 2 | The Boomer |
 | 12 | Alley Oops | Downtown | 10.4k | 29s | 1 Snatcher, 2 Boomer, 1 Chainer, 1 Yeller | 3 |  |
 | 13 | Rush Hour | Downtown | 11.6k | 34s | 3 Boomer, 2 Snatcher, 1 Yeller, 1 Chainer | 2 |  |

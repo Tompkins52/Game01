@@ -60,17 +60,17 @@
     }
   ],
   "levels": [
-    { "id": 1, "world": 1, "name": "The Squeaky Heist", "seed": 1101, "par": 21, "tokens": "o b p k H b t p k o", "meet": "hoser" },
-    { "id": 2, "world": 1, "name": "Sprinkler Season", "seed": 1202, "par": 22, "tokens": "b p H k h p t H b k o" },
-    { "id": 3, "world": 1, "name": "Hedge Hoppers", "seed": 1303, "par": 26, "tokens": "o h p k H c h t P k H b" },
-    { "id": 4, "world": 1, "name": "Net Gains", "seed": 1404, "par": 26, "tokens": "b p N k h H t p N k c o", "meet": "snatcher" },
-    { "id": 5, "world": 1, "name": "Drench Dan's Driveway", "seed": 1505, "par": 35, "tokens": "b P H k h N t p k H c X", "boss": "drench" },
+    { "id": 1, "world": 1, "name": "The Squeaky Heist", "seed": 1101, "par": 19, "tokens": "o b p k H b t p k o", "meet": "hoser" },
+    { "id": 2, "world": 1, "name": "Sprinkler Season", "seed": 1202, "par": 20, "tokens": "b p H k h p t H b k o" },
+    { "id": 3, "world": 1, "name": "Hedge Hoppers", "seed": 1303, "par": 24, "tokens": "o h p k H c h t P k H b" },
+    { "id": 4, "world": 1, "name": "Net Gains", "seed": 1404, "par": 24, "tokens": "b p N k h H t p N k c o", "meet": "snatcher" },
+    { "id": 5, "world": 1, "name": "Drench Dan's Driveway", "seed": 1505, "par": 32, "tokens": "b P H k h N t p k H c X", "boss": "drench" },
 
-    { "id": 6, "world": 2, "name": "Off the Chain", "seed": 2106, "par": 26, "tokens": "b s C k P t o C h k N b", "meet": "chainer" },
-    { "id": 7, "world": 2, "name": "Duck Pond Dash", "seed": 2207, "par": 27, "tokens": "P s k H b C t s N k P o C" },
-    { "id": 8, "world": 2, "name": "Inside Voices", "seed": 2308, "par": 28, "tokens": "b Y k s P t C Y k h N s b", "meet": "yeller" },
-    { "id": 9, "world": 2, "name": "A Bridge Too Fur", "seed": 2409, "par": 29, "tokens": "s s C k Y t P N s k H Y c b" },
-    { "id": 10, "world": 2, "name": "Captain Snatch", "seed": 2510, "par": 40, "tokens": "b s N k C Y t P N k s C b X", "boss": "captain" },
+    { "id": 6, "world": 2, "name": "Off the Chain", "seed": 2106, "par": 25, "tokens": "b s C k P t o C h k N b", "meet": "chainer" },
+    { "id": 7, "world": 2, "name": "Duck Pond Dash", "seed": 2207, "par": 26, "tokens": "P s k H b C t s N k P o C" },
+    { "id": 8, "world": 2, "name": "Inside Voices", "seed": 2308, "par": 27, "tokens": "b Y k s P t C Y k h N s b", "meet": "yeller" },
+    { "id": 9, "world": 2, "name": "A Bridge Too Fur", "seed": 2409, "par": 28, "tokens": "s s C k Y t P N s k H Y c b" },
+    { "id": 10, "world": 2, "name": "Captain Snatch", "seed": 2510, "par": 38, "tokens": "b s N k C Y t P N k s C b X", "boss": "captain" },
 
     { "id": 11, "world": 3, "name": "Bang Average", "seed": 3111, "par": 31, "tokens": "c h F k c t N F k h Y c b", "meet": "boomer" },
     { "id": 12, "world": 3, "name": "Alley Oops", "seed": 3212, "par": 29, "tokens": "h c N F k h t C c Y k F h b" },
