@@ -1003,7 +1003,7 @@ function wire() {
     else if (running) keepAwake(true);
   });
   window.addEventListener('keydown', (e) => {
-    if ((e.key === 'Escape' || e.key.toLowerCase() === 'p') && running) pause(!paused);
+    if ((e.key === 'Escape' || e.key.toLowerCase() === 'p') && running) pause($('scr-pause').hidden);
   });
 }
 
