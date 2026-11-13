@@ -118,26 +118,36 @@ export class Net {
   }
 
   accept(conn) {
-    conn.on('open', () => {
-      const used = new Set(this.lobby.players.map((p) => p.slot));
-      for (const c of this.conns.keys()) used.add(c);
-      const slot = [1, 2, 3].find((s) => !used.has(s));
-      if (this.racing || slot == null) {
-        conn.send({ t: 'full', why: this.racing ? 'That pack is in the middle of a race. Try again in a minute.' : 'That pack is full.' });
-        setTimeout(() => conn.close(), 400);
-        return;
-      }
-      conn.slot = slot;
-      this.conns.set(slot, conn);
-    });
+    conn.on('open', () => this.admit(conn));
     conn.on('data', (m) => this.hostData(conn, m));
     conn.on('close', () => this.drop(conn));
     conn.on('error', () => this.drop(conn));
   }
 
+  // Give a newly connected phone a spot in the pack, or tell it why not.
+  admit(conn) {
+    if (conn.slot != null || conn.turnedAway) return;
+    const used = new Set(this.lobby.players.map((p) => p.slot));
+    for (const c of this.conns.keys()) used.add(c);
+    const slot = [1, 2, 3].find((s) => !used.has(s));
+    if (this.racing || slot == null) {
+      conn.turnedAway = true;
+      try {
+        conn.send({ t: 'full', why: this.racing ? 'That pack is in the middle of a race. Try again in a minute.' : 'That pack is full.' });
+      } catch (e) { /* it will time out on its own */ }
+      setTimeout(() => conn.close(), 400);
+      return;
+    }
+    conn.slot = slot;
+    this.conns.set(slot, conn);
+  }
+
   hostData(conn, m) {
+    if (!m || typeof m !== 'object') return;
+    // A hello can arrive before the "open" notice on some phones, so admit on either.
+    if (conn.slot == null && m.t === 'hello') this.admit(conn);
     const slot = conn.slot;
-    if (slot == null || !m || typeof m !== 'object') return;
+    if (slot == null) return;
     conn.seen = now();
     switch (m.t) {
       case 'hello':
@@ -256,10 +266,19 @@ export class Net {
         reject(err);
       };
       this.pendingJoin = fail;
-      conn.on('open', () => conn.send({ t: 'hello', dogId: me.dogId, dogLevel: me.dogLevel }));
+      // Say hello, and keep saying it until the host answers.
+      const hello = () => {
+        if (conn.open) conn.send({ t: 'hello', dogId: me.dogId, dogLevel: me.dogLevel });
+      };
+      const again = setInterval(() => {
+        if (this.pendingJoin !== fail) clearInterval(again);
+        else hello();
+      }, 2500);
+      conn.on('open', hello);
       conn.on('data', (m) => {
         if (m && m.t === 'welcome') {
           clearTimeout(timer);
+          clearInterval(again);
           this.pendingJoin = null;
           this.slot = m.slot;
           this.code = code;
