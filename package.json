@@ -1,0 +1,17 @@
+{
+  "name": "chase-the-cat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tilt-to-run dog racing game for phones.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/sim.test.mjs",
+    "test:browser": "node tests/browser.test.mjs http://127.0.0.1:8123/",
+    "test:friends": "node tests/friends.test.mjs http://127.0.0.1:8123/ 127.0.0.1:9000",
+    "serve": "python3 -m http.server 8123"
+  },
+  "devDependencies": {
+    "peer": "^1.0.2",
+    "playwright": "^1.50.0"
+  }
+}
