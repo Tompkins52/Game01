@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chase the Cat</title>
+<meta name="description" content="Pick your dog, chase the cat, hug the kids and chomp the Bad Owners. A tilt-to-run racing game for up to four players.">
+<meta name="theme-color" content="#1b1433">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Chase the Cat">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <main id="stage">
+    <canvas id="game" role="img" aria-label="The race, seen from above"></canvas>
+    <div id="touch" aria-hidden="true"></div>
+    <div id="stick" hidden aria-hidden="true"><div id="nub"></div></div>
+
+    <!-- Race display -->
+    <div id="hud" hidden>
+      <div class="hud-top">
+        <div id="place" aria-live="off">1st</div>
+        <div class="hud-mid">
+          <div id="lane" aria-hidden="true"><i class="flag"></i></div>
+          <div class="hud-stats"><span id="score">0</span><span id="timer">0.0</span></div>
+        </div>
+        <button id="btn-pause" class="round" aria-label="Pause">II</button>
+      </div>
+      <div id="banner" hidden></div>
+      <div class="hud-bottom">
+        <div id="tiltdot" hidden aria-hidden="true"><i></i></div>
+        <div id="energy" role="img" aria-label="Zoomies energy"><i></i><i></i><i></i></div>
+        <button id="btn-zoom" aria-label="Zoomies">ZOOM</button>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <section id="scr-title" class="screen">
+      <canvas id="title-cv" aria-hidden="true"></canvas>
+      <div class="title-wrap">
+        <p class="kicker">Pick your dog. Then...</p>
+        <h1 class="logo"><span>Chase</span><span class="the">the</span><span>Cat</span></h1>
+        <nav class="menu" aria-label="Main menu">
+          <button id="btn-play" class="btn big primary">Play</button>
+          <button id="btn-friends" class="btn big">Race Friends</button>
+          <div class="row">
+            <button id="btn-how" class="btn">How to Play</button>
+            <button id="btn-settings" class="btn">Settings</button>
+          </div>
+        </nav>
+        <p class="fine" id="fineprint">&copy; 2026 TSS</p>
+      </div>
+    </section>
+
+    <!-- Sven explains the game -->
+    <section id="scr-intro" class="screen dark" hidden>
+      <canvas id="intro-cv" role="img" aria-label="Sven shows how the game works"></canvas>
+      <div class="bubble-wrap">
+        <canvas id="sven-cv" width="160" height="160" aria-hidden="true"></canvas>
+        <div class="bubble"><b>Sven</b><p id="intro-text" aria-live="polite"></p></div>
+      </div>
+      <div class="row intro-nav">
+        <button id="btn-intro-skip" class="btn ghost">Skip</button>
+        <span id="intro-dots" aria-hidden="true"></span>
+        <button id="btn-intro-next" class="btn primary">Next</button>
+      </div>
+    </section>
+
+    <!-- Pick a dog -->
+    <section id="scr-dogs" class="screen" hidden>
+      <header class="bar"><button class="btn back" data-back aria-label="Back">&larr;</button><h2>Pick your dog</h2><span></span></header>
+      <div id="dog-grid" class="dog-grid" role="radiogroup" aria-label="Dogs"></div>
+      <div id="dog-card" class="card dog-card"></div>
+      <button id="btn-dog-go" class="btn big primary">Run with this dog</button>
+    </section>
+
+    <!-- Pick a level -->
+    <section id="scr-levels" class="screen" hidden>
+      <header class="bar"><button class="btn back" data-back aria-label="Back">&larr;</button><h2>Levels</h2>
+        <button id="btn-change-dog" class="chip" aria-label="Change dog"><canvas id="chip-cv" width="72" height="72"></canvas><span id="chip-text"></span></button></header>
+      <div id="level-list" class="level-list"></div>
+    </section>
+
+    <!-- Before the race -->
+    <section id="scr-brief" class="screen" hidden>
+      <header class="bar"><button class="btn back" data-back aria-label="Back">&larr;</button><h2 id="brief-world"></h2><span></span></header>
+      <div class="card">
+        <p class="kicker" id="brief-num"></p>
+        <h3 id="brief-name"></h3>
+        <p id="brief-story"></p>
+        <div id="brief-meet" class="meet" hidden>
+          <canvas id="meet-cv" width="160" height="160" aria-hidden="true"></canvas>
+          <div><b id="meet-name"></b><p id="meet-crime"></p><p id="meet-tip" class="tip"></p></div>
+        </div>
+        <ul id="brief-stars" class="goals"></ul>
+      </div>
+      <fieldset class="card controls">
+        <legend>How do you want to steer?</legend>
+        <div class="seg" role="radiogroup" aria-label="Controls">
+          <button id="ctl-tilt" role="radio" aria-checked="false">Tilt the phone</button>
+          <button id="ctl-pad" role="radio" aria-checked="true">Thumb</button>
+        </div>
+        <p id="ctl-help" class="fine"></p>
+      </fieldset>
+      <button id="btn-start" class="btn big primary">Start</button>
+    </section>
+
+    <!-- Paused -->
+    <section id="scr-pause" class="screen overlay" hidden>
+      <div class="card center">
+        <h2>Paused</h2>
+        <button id="btn-resume" class="btn big primary">Keep running</button>
+        <button id="btn-recenter" class="btn">Reset my stay position</button>
+        <div class="seg" role="radiogroup" aria-label="Controls">
+          <button id="p-tilt" role="radio" aria-checked="false">Tilt</button>
+          <button id="p-pad" role="radio" aria-checked="true">Thumb</button>
+        </div>
+        <button id="btn-restart" class="btn">Start over</button>
+        <button id="btn-quit" class="btn ghost">Quit race</button>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="scr-results" class="screen" hidden>
+      <h2 id="res-title"></h2>
+      <div id="res-stars" class="stars" role="img"></div>
+      <div class="card">
+        <table id="res-table"><tbody></tbody></table>
+        <div class="total"><span>Score</span><b id="res-total">0</b></div>
+        <p id="res-best" class="fine"></p>
+      </div>
+      <div class="card love">
+        <canvas id="res-cv" width="144" height="144" aria-hidden="true"></canvas>
+        <div class="love-body">
+          <b id="res-rank"></b>
+          <div class="meter"><i id="res-love"></i></div>
+          <p id="res-lovetext" class="fine"></p>
+        </div>
+      </div>
+      <div id="res-pack" class="card pack" hidden></div>
+      <p id="res-story" class="story" hidden></p>
+      <div class="row">
+        <button id="btn-retry" class="btn">Again</button>
+        <button id="btn-next" class="btn primary">Next level</button>
+      </div>
+      <button id="btn-res-menu" class="btn ghost">Levels</button>
+    </section>
+
+    <!-- Friend races -->
+    <section id="scr-friends" class="screen" hidden>
+      <header class="bar"><button class="btn back" data-back aria-label="Back">&larr;</button><h2>Race Friends</h2><span></span></header>
+      <div id="fr-start">
+        <div class="card center">
+          <p>Up to four phones in one race. Empty spots are filled by computer dogs.</p>
+          <button id="btn-host" class="btn big primary">Start a pack</button>
+        </div>
+        <form id="join-form" class="card center">
+          <label for="join-code">Got a pack code?</label>
+          <input id="join-code" inputmode="text" autocomplete="off" autocapitalize="characters" maxlength="4" placeholder="ABCD" aria-describedby="join-msg">
+          <button class="btn big" type="submit">Join pack</button>
+          <p id="join-msg" class="fine" role="status"></p>
+        </form>
+      </div>
+      <div id="fr-lobby" hidden>
+        <div class="card center">
+          <p class="kicker">Pack code</p>
+          <p id="lobby-code" class="code"></p>
+          <button id="btn-share" class="btn">Share invite</button>
+          <p id="lobby-msg" class="fine" role="status"></p>
+        </div>
+        <ul id="lobby-list" class="lobby-list"></ul>
+        <div class="card center" id="lobby-host">
+          <div class="row lvl-pick">
+            <button id="lvl-prev" class="btn round" aria-label="Previous level">&lsaquo;</button>
+            <div><p class="kicker" id="lobby-lvl-num"></p><b id="lobby-lvl-name"></b></div>
+            <button id="lvl-next" class="btn round" aria-label="Next level">&rsaquo;</button>
+          </div>
+        </div>
+        <div class="row">
+          <button id="btn-lobby-dog" class="btn">Change dog</button>
+          <button id="btn-lobby-go" class="btn primary">Start race</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="scr-settings" class="screen" hidden>
+      <header class="bar"><button class="btn back" data-back aria-label="Back">&larr;</button><h2>Settings</h2><span></span></header>
+      <div class="card settings">
+        <div class="set"><span>Steering</span>
+          <div class="seg" role="radiogroup" aria-label="Steering"><button id="s-tilt" role="radio" aria-checked="false">Tilt</button><button id="s-pad" role="radio" aria-checked="true">Thumb</button></div></div>
+        <div class="set"><span>Tilt feel</span>
+          <div class="seg" role="radiogroup" aria-label="Tilt feel"><button data-sens="30" role="radio" aria-checked="false">Gentle</button><button data-sens="22" role="radio" aria-checked="true">Normal</button><button data-sens="15" role="radio" aria-checked="false">Twitchy</button></div></div>
+        <div class="set"><span>Sound effects</span><button id="s-sfx" class="toggle" role="switch" aria-checked="true"></button></div>
+        <div class="set"><span>Music</span><button id="s-music" class="toggle" role="switch" aria-checked="true"></button></div>
+        <div class="set"><span>Vibration</span><button id="s-buzz" class="toggle" role="switch" aria-checked="true"></button></div>
+      </div>
+      <button id="btn-replay-intro" class="btn">Watch Sven's intro again</button>
+      <button id="btn-reset" class="btn ghost">Erase my progress</button>
+      <p class="fine">No accounts, no ads, no tracking. Your progress stays on this device.</p>
+    </section>
+
+    <div id="rotate" hidden><p>Turn your phone upright to play.</p></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </main>
+</div>
+<noscript><p style="color:#fff;padding:24px">Chase the Cat needs JavaScript turned on.</p></noscript>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
