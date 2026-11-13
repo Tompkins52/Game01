@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "legend": {
+    "o": "open stretch with a line of bones",
+    "b": "winding bone trail",
+    "p": "puddles",
+    "P": "big pond on one side",
+    "s": "stream across the whole track with a bridge",
+    "h": "hedge or wall with gaps",
+    "c": "clutter to dodge or knock over",
+    "k": "kids who want to hug the dogs",
+    "t": "the cat stops to taunt (tag her for a bonus)",
+    "H": "the Hoser",
+    "N": "the Snatcher",
+    "C": "the Chainer",
+    "Y": "the Yeller",
+    "F": "the Boomer",
+    "X": "boss arena (always last)"
+  },
+  "worlds": [
+    {
+      "id": 1,
+      "name": "Maple Street",
+      "story": "Pickles swiped the Golden Squeaky right off the porch on Maple Street. Get her!",
+      "theme": {
+        "ground": "#7cc36a", "groundDark": "#6ab35a", "track": "#727987", "trackAlt": "#6a717f",
+        "edge": "#cfd3da", "line": "#f4ecc9", "water": "#4aa8e0", "waterLight": "#8fd0f5", "waterDark": "#2f86c0",
+        "hedge": "#3f8f4a", "hedgeDark": "#2f6f39", "decor": ["house", "tree", "mailbox", "bush"], "clutter": ["can", "cone"], "night": 0
+      }
+    },
+    {
+      "id": 2,
+      "name": "Barkside Park",
+      "story": "She cut through Barkside Park. Mind the ponds, and mind the people who shouldn't have dogs.",
+      "theme": {
+        "ground": "#6fbf63", "groundDark": "#5fae55", "track": "#dcbc84", "trackAlt": "#d3b178",
+        "edge": "#b9965c", "line": "#c9a66a", "water": "#3f9bd6", "waterLight": "#86c9f0", "waterDark": "#2b7fb8",
+        "hedge": "#3f8f4a", "hedgeDark": "#2f6f39", "decor": ["tree", "flowers", "bench", "tree", "bush"], "clutter": ["cone", "ball"], "night": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "Downtown",
+      "story": "Downtown. Loud, crowded, and somebody keeps lighting firecrackers.",
+      "theme": {
+        "ground": "#8b90a0", "groundDark": "#7d8292", "track": "#4d5160", "trackAlt": "#474b59",
+        "edge": "#b4b9c6", "line": "#f2c94c", "water": "#3c8fcf", "waterLight": "#7fc0ee", "waterDark": "#2a72ad",
+        "hedge": "#9a5b3c", "hedgeDark": "#7a452b", "decor": ["building", "lamp", "hydrant", "building", "planter"], "clutter": ["can", "crate", "cone"], "night": 0.22
+      }
+    },
+    {
+      "id": 4,
+      "name": "The Docks",
+      "story": "The Docks. Why would a cat run all the way out here? Unless she wants us to see something.",
+      "theme": {
+        "ground": "#1f5a7a", "groundDark": "#1a4d69", "track": "#b08455", "trackAlt": "#a57a4d",
+        "edge": "#7a5433", "line": "#8f6a42", "water": "#2a7fae", "waterLight": "#6bb7de", "waterDark": "#1d6088",
+        "hedge": "#8a6a45", "hedgeDark": "#6b5033", "decor": ["boat", "bollard", "lamp", "crates", "bollard"], "clutter": ["crate", "barrel"], "night": 0.38
+      }
+    }
+  ],
+  "levels": [
+    { "id": 1, "world": 1, "name": "The Squeaky Heist", "seed": 1101, "par": 21, "tokens": "o b p k H b t p k o", "meet": "hoser" },
+    { "id": 2, "world": 1, "name": "Sprinkler Season", "seed": 1202, "par": 22, "tokens": "b p H k h p t H b k o" },
+    { "id": 3, "world": 1, "name": "Hedge Hoppers", "seed": 1303, "par": 26, "tokens": "o h p k H c h t P k H b" },
+    { "id": 4, "world": 1, "name": "Net Gains", "seed": 1404, "par": 26, "tokens": "b p N k h H t p N k c o", "meet": "snatcher" },
+    { "id": 5, "world": 1, "name": "Drench Dan's Driveway", "seed": 1505, "par": 35, "tokens": "b P H k h N t p k H c X", "boss": "drench" },
+
+    { "id": 6, "world": 2, "name": "Off the Chain", "seed": 2106, "par": 26, "tokens": "b s C k P t o C h k N b", "meet": "chainer" },
+    { "id": 7, "world": 2, "name": "Duck Pond Dash", "seed": 2207, "par": 27, "tokens": "P s k H b C t s N k P o C" },
+    { "id": 8, "world": 2, "name": "Inside Voices", "seed": 2308, "par": 28, "tokens": "b Y k s P t C Y k h N s b", "meet": "yeller" },
+    { "id": 9, "world": 2, "name": "A Bridge Too Fur", "seed": 2409, "par": 29, "tokens": "s s C k Y t P N s k H Y c b" },
+    { "id": 10, "world": 2, "name": "Captain Snatch", "seed": 2510, "par": 40, "tokens": "b s N k C Y t P N k s C b X", "boss": "captain" },
+
+    { "id": 11, "world": 3, "name": "Bang Average", "seed": 3111, "par": 31, "tokens": "c h F k c t N F k h Y c b", "meet": "boomer" },
+    { "id": 12, "world": 3, "name": "Alley Oops", "seed": 3212, "par": 29, "tokens": "h c N F k h t C c Y k F h b" },
+    { "id": 13, "world": 3, "name": "Rush Hour", "seed": 3313, "par": 34, "tokens": "c F F k h N t c Y C k F h N b" },
+    { "id": 14, "world": 3, "name": "Midnight Zoomies", "seed": 3414, "par": 36, "tokens": "h F Y k c N t F C h k Y N F c b" },
+    { "id": 15, "world": 3, "name": "Boom-Boom Bruno", "seed": 3515, "par": 46, "tokens": "c F N k h Y t F C k c F N h b X", "boss": "bruno" },
+
+    { "id": 16, "world": 4, "name": "Salty Paws", "seed": 4116, "par": 31, "tokens": "s P H k s F t C s N k P Y s b" },
+    { "id": 17, "world": 4, "name": "Crate Escape", "seed": 4217, "par": 36, "tokens": "c s F N k h P t Y C s k F H c N b" },
+    { "id": 18, "world": 4, "name": "Low Tide, High Stakes", "seed": 4318, "par": 37, "tokens": "s s N F k P C t Y s H k F N P C b" },
+    { "id": 19, "world": 4, "name": "The Last Fence", "seed": 4419, "par": 40, "tokens": "h s F Y N k c P t C F s k N Y H F c b" },
+    { "id": 20, "world": 4, "name": "The Ringleader", "seed": 4520, "par": 62, "tokens": "b s F N k P Y C t H F s k N Y C F h b X", "boss": "ringleader" }
+  ],
+  "npc": { "skill": [0.4, 0.95], "aggression": [0.35, 0.8] }
+}

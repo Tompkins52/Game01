@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "track": {
+    "width": 480,
+    "margin": 40,
+    "runway": 520,
+    "runout": 460
+  },
+  "points": {
+    "bone": 50,
+    "hug": 300,
+    "chomp": 2500,
+    "bossHit": 5000,
+    "bossFinalBlow": 5000,
+    "catTag": 750,
+    "pup": 200,
+    "place": [
+      5000,
+      3000,
+      2000,
+      1000
+    ],
+    "timeBonusPerSecond": 100,
+    "cleanRun": 1500,
+    "combo": [
+      1,
+      1.5,
+      2
+    ],
+    "perLevelBonus": 0.05,
+    "perDogLevelBonus": 0.02
+  },
+  "love": {
+    "hug": 40,
+    "chomp": 10,
+    "bossHit": 25,
+    "catTag": 20,
+    "place": [
+      60,
+      40,
+      25,
+      10
+    ],
+    "needBase": 100,
+    "needStep": 60,
+    "maxLevel": 20,
+    "speedPerLevel": 0.005,
+    "ranks": [
+      {
+        "level": 1,
+        "title": "Pup"
+      },
+      {
+        "level": 3,
+        "title": "Good Dog"
+      },
+      {
+        "level": 5,
+        "title": "Very Good Dog"
+      },
+      {
+        "level": 8,
+        "title": "Best Friend"
+      },
+      {
+        "level": 11,
+        "title": "Neighborhood Hero"
+      },
+      {
+        "level": 14,
+        "title": "Top Dog"
+      },
+      {
+        "level": 17,
+        "title": "Legend"
+      },
+      {
+        "level": 20,
+        "title": "Goodest Dog Ever"
+      }
+    ]
+  },
+  "energy": {
+    "maxPips": 3,
+    "startPips": 1,
+    "chomp": 1,
+    "bossHit": 1,
+    "bone": 0.125,
+    "catTag": 1,
+    "hug": 0.25,
+    "zoomSeconds": 2.2,
+    "zoomBoost": 1.6,
+    "barkRadius": 280,
+    "barkStun": 1.2
+  },
+  "move": {
+    "backFactor": 0.5,
+    "sideFactor": 0.9,
+    "happyBoost": 1.18,
+    "happySeconds": 3.5,
+    "soakFactor": 0.55,
+    "cowerFactor": 0.35,
+    "hugSeconds": 1.15,
+    "hugRadius": 105
+  },
+  "stars": [
+    "Finish in the top 3",
+    "Win the race",
+    "Win and beat the par time"
+  ],
+  "unlockPlace": 3,
+  "finishCountdown": 20,
+  "cat": {
+    "lead": 600,
+    "tauntTrigger": 260,
+    "tauntWindup": 0.5,
+    "name": "Pickles"
+  }
+}

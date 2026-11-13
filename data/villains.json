@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "note": "Pairs like [a, b] are the value on level 1 and the value on level 20; the game blends between them.",
+  "types": {
+    "hoser": {
+      "name": "The Hoser",
+      "crime": "Blasts dogs with the garden hose for a laugh.",
+      "tip": "Wait for the jet to swing away, then run up the edge and CHOMP.",
+      "r": 34,
+      "jetLen": [
+        290,
+        370
+      ],
+      "jetWidth": 54,
+      "period": [
+        2.9,
+        1.9
+      ],
+      "sweepDeg": 42,
+      "soakSeconds": 0.9,
+      "look": {
+        "skin": "#e9b98f",
+        "shirt": "#3d9a6a",
+        "pants": "#39424e",
+        "hat": "#d94f4f",
+        "hatStyle": "cap",
+        "prop": "hose"
+      }
+    },
+    "snatcher": {
+      "name": "The Snatcher",
+      "crime": "A crooked dogcatcher who nets every dog he sees.",
+      "tip": "Bait his swing, back off, then CHOMP while he untangles. Zoomies tear right through the net.",
+      "r": 34,
+      "speed": [
+        105,
+        185
+      ],
+      "range": 250,
+      "windup": [
+        0.44,
+        0.32
+      ],
+      "recover": [
+        1.45,
+        1.0
+      ],
+      "netR": 64,
+      "netSeconds": 1.5,
+      "look": {
+        "skin": "#c98d62",
+        "shirt": "#7b6a4a",
+        "pants": "#4a4033",
+        "hat": "#4a4033",
+        "hatStyle": "brim",
+        "prop": "net"
+      }
+    },
+    "chainer": {
+      "name": "The Chainer",
+      "crime": "Keeps his dog chained outside day and night.",
+      "tip": "His chain blocks the road. CHOMP him and it drops for everybody.",
+      "r": 34,
+      "span": [
+        0.5,
+        0.62
+      ],
+      "look": {
+        "skin": "#f0c7a0",
+        "shirt": "#5a5f6e",
+        "pants": "#2f3440",
+        "hat": "#2f3440",
+        "hatStyle": "beanie",
+        "prop": "chain"
+      }
+    },
+    "yeller": {
+      "name": "The Yeller",
+      "crime": "Screams at dogs through a megaphone.",
+      "tip": "Rush in right after a yell passes. Zoomies can't hear a thing.",
+      "r": 34,
+      "period": [
+        3.0,
+        2.0
+      ],
+      "ringR": [
+        225,
+        280
+      ],
+      "ringSpeed": 300,
+      "cowerSeconds": 1.1,
+      "look": {
+        "skin": "#8d5b3c",
+        "shirt": "#e0a030",
+        "pants": "#3a3f4b",
+        "hat": "#b03a2e",
+        "hatStyle": "none",
+        "prop": "megaphone"
+      }
+    },
+    "boomer": {
+      "name": "The Boomer",
+      "crime": "Throws firecrackers at dogs to scare them.",
+      "tip": "A red circle means BOOM. Get out of it, then go get him.",
+      "r": 34,
+      "period": [
+        2.6,
+        1.6
+      ],
+      "fuse": [
+        1.0,
+        0.8
+      ],
+      "blastR": 92,
+      "range": 540,
+      "stunSeconds": 0.6,
+      "look": {
+        "skin": "#f2d0b0",
+        "shirt": "#8e44ad",
+        "pants": "#2f3440",
+        "hat": "#f1c40f",
+        "hatStyle": "spike",
+        "prop": "firecracker"
+      }
+    }
+  },
+  "bosses": {
+    "drench": {
+      "name": "Drench Dan",
+      "title": "King of the garden hose",
+      "tip": "His sprinkler arms spin. Slip between the jets and CHOMP. Three bites and the gate opens.",
+      "hp": 3,
+      "r": 48,
+      "jets": 2,
+      "jetLen": 270,
+      "spin": 1.05,
+      "look": {
+        "skin": "#e9b98f",
+        "shirt": "#2e8b57",
+        "pants": "#39424e",
+        "hat": "#b22222",
+        "hatStyle": "cap",
+        "prop": "hose"
+      }
+    },
+    "captain": {
+      "name": "Captain Snatch",
+      "title": "Boss of the crooked pound",
+      "tip": "Giant net, short temper. Make him miss, then CHOMP. Three bites.",
+      "hp": 3,
+      "r": 48,
+      "speed": 210,
+      "range": 330,
+      "windup": 0.36,
+      "recover": 1.05,
+      "netR": 96,
+      "netSeconds": 1.5,
+      "look": {
+        "skin": "#c98d62",
+        "shirt": "#5d4e37",
+        "pants": "#3a3226",
+        "hat": "#2e2a22",
+        "hatStyle": "brim",
+        "prop": "net"
+      }
+    },
+    "bruno": {
+      "name": "Boom-Boom Bruno",
+      "title": "Firecracker kingpin",
+      "tip": "Three firecrackers at a time. Dance through the circles and CHOMP. Three bites.",
+      "hp": 3,
+      "r": 48,
+      "period": 1.9,
+      "salvo": 3,
+      "fuse": 0.95,
+      "blastR": 96,
+      "stunSeconds": 0.6,
+      "look": {
+        "skin": "#f2d0b0",
+        "shirt": "#6c3483",
+        "pants": "#2f3440",
+        "hat": "#f39c12",
+        "hatStyle": "spike",
+        "prop": "firecracker"
+      }
+    },
+    "ringleader": {
+      "name": "The Ringleader",
+      "title": "Runs the whole rotten operation",
+      "tip": "He yells, he throws firecrackers, he swings a net. Five bites and every pup goes free.",
+      "hp": 5,
+      "r": 50,
+      "period": 2.2,
+      "ringR": 330,
+      "ringSpeed": 320,
+      "cowerSeconds": 1.0,
+      "salvo": 2,
+      "fuse": 0.9,
+      "blastR": 96,
+      "stunSeconds": 0.6,
+      "range": 290,
+      "windup": 0.36,
+      "recover": 1.0,
+      "netR": 90,
+      "netSeconds": 1.4,
+      "speed": 150,
+      "look": {
+        "skin": "#d9a37c",
+        "shirt": "#1f1f24",
+        "pants": "#111114",
+        "hat": "#1f1f24",
+        "hatStyle": "tophat",
+        "prop": "megaphone"
+      }
+    }
+  }
+}

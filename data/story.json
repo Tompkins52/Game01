@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "narrator": {
+    "name": "Sven",
+    "look": {
+      "coat": "#2b2a2f", "shade": "#1c1b20", "light": "#f7f4ec", "pattern": "blaze",
+      "ear": "flop", "earColor": "#1c1b20", "tail": "bush", "head": "round",
+      "nose": "#16151a", "eye": "#3b2a1a", "len": 1.08, "wid": 1.12, "brow": "#c98a4a", "extra": "scarf"
+    }
+  },
+  "intro": [
+    { "scene": "hello", "text": "Hi. I'm Sven. I've been a dog my whole life, so I know a few things. Listen up, pup." },
+    { "scene": "heist", "text": "See that cat? That's Pickles. She just swiped the Golden Squeaky. Not cool, Pickles." },
+    { "scene": "tilt", "phase": "forward", "text": "Tip your phone forward to run." },
+    { "scene": "tilt", "phase": "left", "text": "Lean left or right to steer. Forward and left goes forward and left." },
+    { "scene": "tilt", "phase": "stay", "text": "Hold it in your normal spot and you stay. Good stay." },
+    { "scene": "tilt", "phase": "back", "text": "Tip it back to back up. Handy when you overshoot." },
+    { "scene": "thumb", "text": "Don't feel like tilting? Drag your thumb anywhere instead." },
+    { "scene": "water", "text": "Water slows you down. Unless you're a Lab. Labs think it's bath time." },
+    { "scene": "kids", "text": "Kids give hugs. Get close and your dog trots over all by himself. That's just what dogs do. Hugs fill your Love meter and level you up." },
+    { "scene": "badowner", "text": "Now the Bad Owners. They are mean to dogs. So we eat them. CHOMP. Massive points, and every chomp frees a pup." },
+    { "scene": "zoom", "text": "Chomps fill your energy. Hit ZOOM for the zoomies: faster, splash proof, and scared of nothing." },
+    { "scene": "finish", "text": "First dog to tree that cat wins. Now go get her." }
+  ],
+  "ending": "Pickles wasn't running away. She was leading you here. The cages are open and every pup is free. Good dog. Best dog. And yes, she gives the Squeaky back.",
+  "tips": [
+    "Save a Zoomies for when the cat stops to taunt. That's how you tag her.",
+    "A hug costs a second and pays it back with a Happy Tail speed burst.",
+    "Chomp Bad Owners back to back without getting hit and the points climb.",
+    "Zoomies run right past kids. Sometimes there's no time for hugs.",
+    "Stuck in a net? Shake the phone or wiggle your thumb to break out faster.",
+    "Tip the phone back to bait the Snatcher's swing, then go get him."
+  ]
+}

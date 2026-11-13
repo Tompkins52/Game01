@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "slotColors": [
+    "#e5383b",
+    "#2f80ed",
+    "#27ae60",
+    "#9b51e0"
+  ],
+  "dogs": [
+    {
+      "id": "zazu",
+      "name": "Zazu",
+      "breed": "The Top Dog",
+      "tagline": "Strongest dog on the block. Nobody argues.",
+      "bars": {
+        "speed": 5,
+        "swim": 4,
+        "chomp": 5,
+        "heart": 5
+      },
+      "speed": 360,
+      "accel": 7,
+      "swim": 0.7,
+      "reach": 14,
+      "chompEnergy": 1.25,
+      "heart": 1.5,
+      "hugTime": 0.75,
+      "size": 1.08,
+      "startPips": 3,
+      "zoomTime": 1.15,
+      "perk": {
+        "name": "Top Dog",
+        "text": "Starts every race with a full tank of Zoomies."
+      },
+      "npc": false,
+      "look": {
+        "coat": "#6f8098",
+        "shade": "#56657b",
+        "light": "#f3f1ea",
+        "pattern": "chest",
+        "ear": "rose",
+        "earColor": "#5a6980",
+        "tail": "whip",
+        "head": "broad",
+        "nose": "#2a2a33",
+        "eye": "#3b2a1a",
+        "len": 1.0,
+        "wid": 1.12,
+        "extra": "cape"
+      }
+    },
+    {
+      "id": "pitbull",
+      "name": "Pit Bull",
+      "breed": "Pit Bull",
+      "tagline": "All muscle, all heart. Kids can't keep their hands off him.",
+      "bars": {
+        "speed": 4,
+        "swim": 3,
+        "chomp": 5,
+        "heart": 5
+      },
+      "speed": 342,
+      "accel": 6.5,
+      "swim": 0.55,
+      "reach": 16,
+      "chompEnergy": 1.5,
+      "heart": 1.5,
+      "hugTime": 0.7,
+      "size": 1.06,
+      "perk": {
+        "name": "Big Chomp",
+        "text": "Chomps from farther away and gets extra energy from every Bad Owner."
+      },
+      "npc": true,
+      "look": {
+        "coat": "#c98a52",
+        "shade": "#a96f3d",
+        "light": "#f6efe3",
+        "pattern": "chest",
+        "ear": "rose",
+        "earColor": "#b0733f",
+        "tail": "whip",
+        "head": "broad",
+        "nose": "#8a4a3a",
+        "eye": "#3b2a1a",
+        "len": 0.98,
+        "wid": 1.14
+      }
+    },
+    {
+      "id": "greyhound",
+      "name": "Greyhound",
+      "breed": "Greyhound",
+      "tagline": "Built like an arrow. Runs like one too.",
+      "bars": {
+        "speed": 5,
+        "swim": 2,
+        "chomp": 2,
+        "heart": 3
+      },
+      "speed": 380,
+      "accel": 5,
+      "swim": 0.42,
+      "reach": 4,
+      "chompEnergy": 1,
+      "heart": 1.0,
+      "hugTime": 1.0,
+      "size": 1.02,
+      "perk": {
+        "name": "Rocket",
+        "text": "Fastest top speed on dry ground."
+      },
+      "npc": true,
+      "look": {
+        "coat": "#b7bbc6",
+        "shade": "#8f94a1",
+        "light": "#eceef2",
+        "pattern": "brindle",
+        "ear": "rose",
+        "earColor": "#8f94a1",
+        "tail": "whip",
+        "head": "long",
+        "nose": "#2a2a33",
+        "eye": "#2a2a33",
+        "len": 1.16,
+        "wid": 0.8
+      }
+    },
+    {
+      "id": "labrador",
+      "name": "Labrador",
+      "breed": "Labrador",
+      "tagline": "Has never seen water he didn't want to be in.",
+      "bars": {
+        "speed": 3,
+        "swim": 5,
+        "chomp": 3,
+        "heart": 4
+      },
+      "speed": 330,
+      "accel": 6,
+      "swim": 0.86,
+      "reach": 8,
+      "chompEnergy": 1,
+      "heart": 1.3,
+      "hugTime": 0.85,
+      "size": 1.05,
+      "perk": {
+        "name": "Water Dog",
+        "text": "Barely slows down in water."
+      },
+      "npc": true,
+      "look": {
+        "coat": "#e9c46a",
+        "shade": "#cfa64a",
+        "light": "#f5dc9c",
+        "pattern": "solid",
+        "ear": "flop",
+        "earColor": "#c99a3e",
+        "tail": "otter",
+        "head": "round",
+        "nose": "#3a2a22",
+        "eye": "#3b2a1a",
+        "len": 1.04,
+        "wid": 1.04
+      }
+    },
+    {
+      "id": "shepherd",
+      "name": "German Shepherd",
+      "breed": "German Shepherd",
+      "tagline": "Always on duty. Nothing rattles him.",
+      "bars": {
+        "speed": 4,
+        "swim": 3,
+        "chomp": 4,
+        "heart": 3
+      },
+      "speed": 346,
+      "accel": 6,
+      "swim": 0.55,
+      "reach": 12,
+      "chompEnergy": 1.15,
+      "heart": 1.0,
+      "hugTime": 1.0,
+      "size": 1.1,
+      "nerve": 0.5,
+      "perk": {
+        "name": "On Duty",
+        "text": "Shakes off yelling and firecrackers twice as fast."
+      },
+      "npc": true,
+      "look": {
+        "coat": "#c8924e",
+        "shade": "#2b2622",
+        "light": "#dcb07a",
+        "pattern": "saddle",
+        "ear": "point",
+        "earColor": "#2b2622",
+        "tail": "bush",
+        "head": "wedge",
+        "nose": "#1c1a1a",
+        "eye": "#3b2a1a",
+        "len": 1.1,
+        "wid": 1.0
+      }
+    },
+    {
+      "id": "corgi",
+      "name": "Corgi",
+      "breed": "Corgi",
+      "tagline": "Short legs. Huge fan club.",
+      "bars": {
+        "speed": 2,
+        "swim": 2,
+        "chomp": 3,
+        "heart": 5
+      },
+      "speed": 315,
+      "accel": 9,
+      "swim": 0.4,
+      "reach": 8,
+      "chompEnergy": 1,
+      "heart": 1.6,
+      "hugTime": 0.55,
+      "size": 0.84,
+      "hazardScale": 0.7,
+      "perk": {
+        "name": "Low Rider",
+        "text": "Nets and hoses often pass right over him. Quickest hugs in town."
+      },
+      "npc": true,
+      "look": {
+        "coat": "#e09a4a",
+        "shade": "#c27f33",
+        "light": "#fbf4e6",
+        "pattern": "corgi",
+        "ear": "bat",
+        "earColor": "#c27f33",
+        "tail": "nub",
+        "head": "wedge",
+        "nose": "#2a2a33",
+        "eye": "#3b2a1a",
+        "len": 1.18,
+        "wid": 1.02
+      }
+    },
+    {
+      "id": "husky",
+      "name": "Husky",
+      "breed": "Husky",
+      "tagline": "Could do this all day. Will tell you about it.",
+      "bars": {
+        "speed": 4,
+        "swim": 4,
+        "chomp": 3,
+        "heart": 3
+      },
+      "speed": 346,
+      "accel": 5.5,
+      "swim": 0.7,
+      "reach": 8,
+      "chompEnergy": 1,
+      "heart": 1.1,
+      "hugTime": 0.95,
+      "size": 1.06,
+      "zoomTime": 1.45,
+      "perk": {
+        "name": "Never Tired",
+        "text": "Zoomies last much longer."
+      },
+      "npc": true,
+      "look": {
+        "coat": "#8794a6",
+        "shade": "#5f6b7c",
+        "light": "#f4f6f8",
+        "pattern": "mask",
+        "ear": "point",
+        "earColor": "#5f6b7c",
+        "tail": "curl",
+        "head": "wedge",
+        "nose": "#2a2a33",
+        "eye": "#4fb3e8",
+        "len": 1.06,
+        "wid": 1.0
+      }
+    },
+    {
+      "id": "chihuahua",
+      "name": "Chihuahua",
+      "breed": "Chihuahua",
+      "tagline": "Four pounds of pure opinion.",
+      "bars": {
+        "speed": 3,
+        "swim": 1,
+        "chomp": 2,
+        "heart": 4
+      },
+      "speed": 328,
+      "accel": 11,
+      "swim": 0.33,
+      "reach": 2,
+      "chompEnergy": 1,
+      "heart": 1.3,
+      "hugTime": 0.8,
+      "size": 0.68,
+      "hazardScale": 0.6,
+      "barkStun": 2,
+      "perk": {
+        "name": "Tiny Terror",
+        "text": "Hard to hit, turns on a dime, and her bark stuns Bad Owners twice as long."
+      },
+      "npc": true,
+      "look": {
+        "coat": "#e6c08a",
+        "shade": "#cba066",
+        "light": "#f8ead2",
+        "pattern": "chest",
+        "ear": "bat",
+        "earColor": "#d9a877",
+        "tail": "curl",
+        "head": "round",
+        "nose": "#2a2a33",
+        "eye": "#1f1a17",
+        "len": 0.9,
+        "wid": 0.95
+      }
+    }
+  ]
+}
